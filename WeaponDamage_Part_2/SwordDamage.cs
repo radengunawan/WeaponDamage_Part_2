@@ -11,7 +11,8 @@ namespace WeaponDamage_Part_2
 
         public SwordDamage(int startingRoll) : base(startingRoll) { }
 
-        protected override void CalculateDamage()
+        //protected abstract void CalculateDamage(); //<-- from abstract class, unimplemented
+          protected override void CalculateDamage()
         {
             decimal magicMultiplier = 1M;
             if (this.Magic) magicMultiplier = 1.75M;

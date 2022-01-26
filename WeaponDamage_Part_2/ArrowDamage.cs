@@ -12,12 +12,13 @@ namespace WeaponDamage_Part_2
 
         public ArrowDamage(int startingRoll) : base(startingRoll) { }
 
+        //protected abstract void CalculateDamage(); //<-- from abstract class, unimplemented
         protected override void CalculateDamage()
         {
-            decimal baseDamage = Roll * BASE_MULTIPLIER;
-            if (Magic) baseDamage *= MAGIC_MULTIPLIER;
-            if (Flaming) Damage = (int)Math.Ceiling(baseDamage + FLAME_DAMAGE);
-            else Damage = (int)Math.Ceiling(baseDamage);
+            decimal baseDamage = this.Roll * BASE_MULTIPLIER;
+            if (this.Magic) baseDamage *= MAGIC_MULTIPLIER;
+            if (this.Flaming) this.Damage = (int)Math.Ceiling(baseDamage + FLAME_DAMAGE);
+            else this.Damage = (int)Math.Ceiling(baseDamage);
         }
     }
 }
