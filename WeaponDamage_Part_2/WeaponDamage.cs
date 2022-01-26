@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WeaponDamage_Part_2
 {
-    abstract class WeaponDamage  //<--Abstract class cannot be instatiated, or make a class from this base class
+    abstract class WeaponDamage  //<--Abstract class cannot be instatiated, 
     {
         public int Damage { 
             get; 
@@ -47,6 +47,9 @@ namespace WeaponDamage_Part_2
         }
 
         protected abstract void CalculateDamage();
+        //{
+            //Console.WriteLine("Anything");
+       // }
 
         public WeaponDamage(int startingRoll)
         {
