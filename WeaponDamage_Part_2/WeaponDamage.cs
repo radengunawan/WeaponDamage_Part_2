@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WeaponDamage_Part_2
 {
-    abstract class WeaponDamage  //<--Abstract class cannot be instatiated, 
+    abstract class WeaponDamage  //<--Abstract class cannot be instatiated, can ONLY be INHERITED / EXTENDED
     {
         public int Damage { 
             get; 
