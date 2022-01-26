@@ -14,11 +14,11 @@ namespace WeaponDamage_Part_2
         protected override void CalculateDamage()
         {
             decimal magicMultiplier = 1M;
-            if (Magic) magicMultiplier = 1.75M;
+            if (this.Magic) magicMultiplier = 1.75M;
 
-            Damage = BASE_DAMAGE;
-            Damage = (int)(Roll * magicMultiplier) + BASE_DAMAGE;
-            if (Flaming) Damage += FLAME_DAMAGE;
+            this.Damage = BASE_DAMAGE;
+            this.Damage = (int)(this.Roll * magicMultiplier) + BASE_DAMAGE;
+            if (this.Flaming) this.Damage += FLAME_DAMAGE;
         }
     }
 

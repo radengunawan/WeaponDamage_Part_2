@@ -4,17 +4,19 @@ using System.Text;
 
 namespace WeaponDamage_Part_2
 {
-    abstract class WeaponDamage
+    abstract class WeaponDamage  //<--Abstract class cannot be instatiated, or make a class from this base class
     {
-        public int Damage { get; protected set; }
+        public int Damage { 
+            get; 
+            protected set; }
 
         private int roll;
         public int Roll
         {
-            get { return roll; }
+            get { return this.roll; }
             set
             {
-                roll = value;
+                this.roll = value;
                 CalculateDamage();
             }
         }
@@ -22,10 +24,10 @@ namespace WeaponDamage_Part_2
         private bool magic;
         public bool Magic
         {
-            get { return magic; }
+            get { return this.magic; }
             set
             {
-                magic = value;
+                this.magic = value;
                 CalculateDamage();
             }
         }
@@ -33,10 +35,13 @@ namespace WeaponDamage_Part_2
         private bool flaming;
         public bool Flaming
         {
-            get { return flaming; }
+            get
+            {
+                return this.flaming;
+            }
             set
             {
-                flaming = value;
+                this.flaming = value;
                 CalculateDamage();
             }
         }
@@ -45,7 +50,7 @@ namespace WeaponDamage_Part_2
 
         public WeaponDamage(int startingRoll)
         {
-            roll = startingRoll;
+            this.roll = startingRoll;
             CalculateDamage();
         }
     }
