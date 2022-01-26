@@ -46,9 +46,9 @@ namespace WeaponDamage_Part_2
             }
         }
 
-        protected abstract void CalculateDamage();
+        protected abstract void CalculateDamage(); //<-- ABSTRACT METHOD: NOT IMPLEMENTED AT ALL
         //{
-            //Console.WriteLine("Anything");
+        //    Console.WriteLine("Anything");
        // }
 
         public WeaponDamage(int startingRoll)
